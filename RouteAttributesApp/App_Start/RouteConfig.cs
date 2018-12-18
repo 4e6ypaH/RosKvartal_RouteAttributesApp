@@ -13,6 +13,15 @@ namespace RouteAttributesApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+         //   routes.MapRoute(
+         //       name: "Default2",
+         //       url: "{id}/{name}",
+         //       defaults: new { controller = "Home", action = "Test" },
+         //       constraints: new { id = "\\d+" }
+         //);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
